@@ -1,0 +1,19 @@
+{
+  "id": "session-notes",
+  "repo": "wszbest68-gif/ccgui-plugin-session-notes",
+  "tier": "js",
+  "version": "0.1.0",
+  "minAppVersion": "1.0.6",
+  "sdkVersion": "^0.3",
+  "permissions": [
+    "storage",
+    "events",
+    "ui:panel-tab",
+    "ui:session-menu"
+  ],
+  "sha256": {
+    "main.js": "666c37f7b2e52caaa8bc70dd1657f65d4f4e0ae515ac0174c8ba858668a70628",
+    "manifest.json": "8523ee5f5e603397d10a0d6b27af728e3624e6f719f00b35f57473f9a5771ec6",
+    "styles.css": "d4523348309fee493467b168f85e2f039589f985302e3d02b2c78246d96ee4ea"
+  }
+}

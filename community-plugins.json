@@ -35,6 +35,13 @@
     "author": "zhukunpenglinyutong"
   },
   {
+    "id": "session-notes",
+    "repo": "wszbest68-gif/ccgui-plugin-session-notes",
+    "name": "会话便签",
+    "description": "给任意会话贴上本地便签：右侧面板编辑当前会话备注、右键菜单直达、列表统一管理，数据仅存本机。",
+    "author": "wszbest68-gif"
+  },
+  {
     "id": "token-meter",
     "repo": "zhukunpenglinyutong/ccgui-plugin-token-meter",
     "name": "Token 速度表",
