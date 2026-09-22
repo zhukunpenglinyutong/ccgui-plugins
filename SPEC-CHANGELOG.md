@@ -3,6 +3,14 @@
 规范全文见 desktop-cc-gui 仓库 `docs/plugin-development-guide.zh-CN.md`。
 本文件只记录规范的演进；每次规范变更（新权限、新字段、规则收紧）在此追加一段。
 
+## v0.2 — 2026-09（展示素材：icon / screenshots）
+
+- 新增可选字段 `icon`（方形图标，一个）与 `screenshots`（效果图，≤ 5 张），位置：插件仓库 `manifest.json`；首次上架时照样写入 `plugins/<id>.json`。
+- 索引镜像：版本机器人登记新版本时把 manifest 里的两个字段写进索引条目；manifest 缺省字段保留索引现值（索引侧可单独提只改素材的 PR）；`"screenshots": []` 显式清空，`icon` 从索引条目删除即移除。同版本只改素材的 PR 允许但**不自动合并**，转人工审核。
+- 素材位置：图片放在插件仓库里用相对路径引用（推荐 `docs/`），也接受绝对 https URL；按默认分支 HEAD 读取，换图不锁 Release。
+- 校验：只允许图片扩展名（png/jpg/jpeg/webp/gif/svg/avif），路径不得逃逸仓库/反斜杠/控制字符，单条 ≤ 1024 字符，效果图 ≤ 5 张；缺省合法（App 回退首字母瓷砖/不渲染图集）。
+- App 侧渲染见 desktop-cc-gui `docs/ui-ux-spec.zh-CN.md` §3「插件素材可选、缺失不占位」。
+
 ## v0.1 — 2026-09-12（初始版本）
 
 - 分发模式（Obsidian 同款）：中央索引仓 + 每插件独立 GitHub repo + GitHub Releases 发版，零自建服务器。

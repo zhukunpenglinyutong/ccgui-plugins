@@ -10,7 +10,7 @@ GitHub Releases 分发（Obsidian 社区插件同款模式，零自建服务器�
 
 ```
 community-plugins.json        # 插件列表（id/repo/name/description/author，按 id 字典序）
-plugins/<id>.json             # 每个插件的版本登记：version/tier/permissions/sha256/minAppVersion
+plugins/<id>.json             # 每个插件的版本登记：version/tier/permissions/sha256/minAppVersion + 展示素材 icon/screenshots
 download-counts.json         # 各插件累计下载量（机器人每 6h 聚合 release 下载数生成，勿手改）
 scripts/validate.mjs          # 审核校验器（零依赖 Node ≥ 20）
 .github/workflows/validate.yml  # PR 校验 + main 全量复检
@@ -66,7 +66,24 @@ git tag 1.0.0 && git push origin 1.0.0
    下载产物核对 SHA256、扫描 bundle 黑名单与体积、生成审核报告评论在 PR 里。
 5. 人工审核通过后合并，即上架。
 
-### 4. 版本更新
+### 4. 展示素材（可选，不改可以不上）
+
+插件市场里的图标和详情页效果图都由**插件仓库自己托管**，manifest 声明、索引镜像：
+
+```jsonc
+// 插件仓库的 manifest.json
+"icon": "docs/icon.png",                  // 方形图标，PNG/SVG/WebP/JPG，建议 ≥ 128×128
+"screenshots": ["docs/screenshot-1.png"]  // ≤ 5 张，数组顺序 = 展示顺序
+```
+
+- 图片放仓库里用相对路径引用（推荐统一放 `docs/`；也接受绝对 https URL）。
+- 索引条目的 `icon` / `screenshots` 由机器人登记新版本时从 manifest 镜像而来；
+  只改素材、不改版本可以直接提一个只动这两个字段的 PR（同版本素材 PR 不走
+  「版本登记自动合并」，转人工审核——素材是用户可见内容）。
+- 图片按默认分支（HEAD）读取，**替换同名文件不需要发版**；换路径则随下一次发版进索引。
+- 两个字段都可缺省：不填就没有图标（市场用首字母瓷砖）/没有图集。
+
+### 5. 版本更新
 
 **作者只需在插件仓库按第 2 步打 tag 发 Release，其余全自动：**
 
@@ -92,6 +109,7 @@ git tag 1.0.0 && git push origin 1.0.0
 - bundle 体积 ≤ 512KB（警告）/ 2MB（硬上限，gzip 前）
 - `id` 一旦上架永不更改；`version` 必须严格单调递增
 - 权限最小化：`network:` / `exec:` 授权精确到最小范围，申请用不到的权限会被要求删减
+- 展示素材只允许图片扩展名（png/jpg/jpeg/webp/gif/svg/avif）；相对路径不得逃逸仓库，效果图 ≤ 5 张
 - bundle 黑名单：`eval(` / `new Function(` / `__TAURI__` / `localStorage` / 远程 `import(` 一律拒绝
 
 ## 下架

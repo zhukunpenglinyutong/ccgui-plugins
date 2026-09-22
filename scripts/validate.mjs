@@ -104,9 +104,75 @@ const SDK_RANGE_RE = /^(\^|~|>=)?\d+\.\d+(\.\d+)?$|^\*$/;
 const TIERS = new Set(["declarative", "js"]);
 const ENTRY_KEYS = new Set([
   "id", "repo", "tier", "version", "minAppVersion", "sdkVersion",
-  "permissions", "sha256", "delisted", "pubkey",
+  "permissions", "sha256", "delisted", "pubkey", "icon", "screenshots",
 ]);
 const COMMUNITY_KEYS = new Set(["id", "repo", "name", "description", "author"]);
+
+/** 展示素材（SPEC-CHANGELOG v0.2）：manifest 声明，机器人镜像进索引。 */
+const MAX_SCREENSHOTS = 5;
+const MAX_MEDIA_PATH_CHARS = 1024;
+const IMAGE_EXT_RE = /\.(png|jpe?g|webp|gif|svg|avif)$/i;
+
+/**
+ * 校验一条展示素材路径并归一化：接受仓库内相对路径或绝对 https URL。
+ * 拒绝其他 scheme、协议相对/绝对路径、反斜杠、控制字符、`..` 逃逸与
+ * 非图片扩展名——与宿主 `resolve_asset_url` 的放行面一致，多一条扩展名
+ * 检查（App 遇到非图片只会渲染成破图，在登记入口拦下）。
+ * @returns {string|null} 归一化后的路径；null = 不合法。
+ */
+export function normalizeMediaPath(raw) {
+  if (typeof raw !== "string") return null;
+  const trimmed = raw.trim();
+  if (!trimmed || trimmed.length > MAX_MEDIA_PATH_CHARS) return null;
+  // eslint-disable-next-line no-control-regex
+  if (/[\u0000-\u001f\u007f]/.test(trimmed)) return null;
+  if (trimmed.includes("\\")) return null;
+  if (!IMAGE_EXT_RE.test(trimmed.split(/[?#]/, 1)[0])) return null;
+  if (/^https:\/\//i.test(trimmed)) {
+    try {
+      return new URL(trimmed).toString();
+    } catch {
+      return null;
+    }
+  }
+  if (/^[a-z][a-z0-9+.-]*:/i.test(trimmed) || trimmed.startsWith("//") || trimmed.startsWith("/")) {
+    return null;
+  }
+  if (trimmed.split("/").some((segment) => segment === "..")) return null;
+  return trimmed;
+}
+
+/** manifest 里的 icon / screenshots 共用的形状校验；返回错误句子或 null。 */
+export function mediaFieldProblem(label, value) {
+  if (label === "icon") {
+    return normalizeMediaPath(value) === null
+      ? `icon 不合法（需仓库内相对路径或 https URL，图片扩展名，≤ ${MAX_MEDIA_PATH_CHARS} 字符）`
+      : null;
+  }
+  if (!Array.isArray(value)) return `${label} 必须是字符串数组`;
+  if (value.length > MAX_SCREENSHOTS) return `${label} 超过 ${MAX_SCREENSHOTS} 张`;
+  for (const shot of value) {
+    if (normalizeMediaPath(shot) === null) return `${label} 含不合法路径 ${JSON.stringify(shot)}`;
+  }
+  return null;
+}
+
+/**
+ * 去掉展示素材字段后的规范化 JSON：判断「同版本的 PR 是否只在登记素材」。
+ * 字段顺序归一化后比较，避免 JSON 键序差异造成误判。
+ */
+function canonicalEntryWithoutMedia(entry) {
+  const copy = {};
+  for (const key of Object.keys(entry).sort()) {
+    if (key === "icon" || key === "screenshots") continue;
+    const value = entry[key];
+    copy[key] =
+      value && typeof value === "object" && !Array.isArray(value)
+        ? Object.fromEntries(Object.keys(value).sort().map((k) => [k, value[k]]))
+        : value;
+  }
+  return JSON.stringify(copy);
+}
 
 export const MAIN_WARN_BYTES = 512 * 1024; // 规范 §4：bundle ≤ 512KB 警告
 export const MAIN_MAX_BYTES = 2 * 1024 * 1024; // 规范 §4：2MB 硬上限（gzip 前）
@@ -299,6 +365,11 @@ export function validateEntry(entry, fileName, errors, warnings) {
   if (entry.delisted !== undefined && typeof entry.delisted !== "boolean") {
     errors.push(`${where}.delisted 必须是布尔值`);
   }
+  for (const field of ["icon", "screenshots"]) {
+    if (entry[field] === undefined) continue;
+    const problem = mediaFieldProblem(field, entry[field]);
+    if (problem) errors.push(`${where}.${problem}`);
+  }
   const permissions = entry.permissions ?? [];
   if (!Array.isArray(permissions)) {
     errors.push(`${where}.permissions 必须是字符串数组`);
@@ -431,8 +502,13 @@ async function checkRelease(entry, errors, warnings, report) {
   if (Array.isArray(manifest.keywords) && manifest.keywords.length > 8) {
     errors.push(`${id}: manifest.keywords 超过 8 个（规范 §5）`);
   }
-  if (Array.isArray(manifest.screenshots) && manifest.screenshots.length > 5) {
-    errors.push(`${id}: manifest.screenshots 超过 5 张（规范 §5）`);
+  // 展示素材：索引里的值可能是索引侧单独维护的（只改素材不改版本的 PR），
+  // 所以不要求与 Release manifest 相等；但 manifest 里写了就必须合法，
+  // 否则下一次版本登记会把坏路径镜像进索引。
+  for (const field of ["icon", "screenshots"]) {
+    if (manifest[field] === undefined) continue;
+    const problem = mediaFieldProblem(field, manifest[field]);
+    if (problem) errors.push(`${id}: manifest.${problem}（规范 §5.1）`);
   }
 
   // 权限-代码比对（启发式，漏声明 = 错误；多声明 = 警告请审核员裁量）
@@ -495,6 +571,7 @@ async function main() {
   const reportSections = [];
   const resultEntries = [];
   const permissionsAdded = [];
+  const mediaOnlyEntries = [];
 
   // 1. 全局结构
   const community = loadJson(COMMUNITY_FILE, errors);
@@ -543,7 +620,14 @@ async function main() {
         if (baseEntry) {
           const cmp = compareSemver(entry.version, baseEntry.version);
           const delistOnly = entry.delisted !== baseEntry.delisted && cmp === 0;
-          if (cmp !== null && cmp <= 0 && !delistOnly) {
+          // 同版本上只动 icon/screenshots（索引侧单独登记素材，见
+          // SPEC-CHANGELOG v0.2）：允许，但排除在自动合并之外——素材是用户
+          // 可见内容，不在「产物 SHA256 已核对」的自动信任范围内。
+          const mediaOnly =
+            cmp === 0 &&
+            canonicalEntryWithoutMedia(entry) === canonicalEntryWithoutMedia(baseEntry);
+          if (mediaOnly) mediaOnlyEntries.push(id);
+          if (cmp !== null && cmp <= 0 && !delistOnly && !mediaOnly) {
             errors.push(`${id}: version "${entry.version}" 未严格大于已登记版本 "${baseEntry.version}"（规范 §5 单调规则）`);
           }
           if (baseEntry.delisted === true && cmp !== null && cmp > 0) {
@@ -577,6 +661,9 @@ async function main() {
       netPerms.length ? `- 网络域名：${netPerms.map((p) => p.slice(8)).join(", ")}` : null,
       execPerms.length ? `- ⚠️ 进程执行：${execPerms.map((p) => p.slice(5)).join(", ")}（任意代码执行能力，重点审核）` : null,
       report.readme === null ? null : `- README：${report.readme ? "✅" : "❌"} · LICENSE：${report.license ? "✅" : "❌"}`,
+      entry.icon || (entry.screenshots ?? []).length
+        ? `- 展示素材：${entry.icon ? "icon ✅" : "icon —"} · 效果图 ${(entry.screenshots ?? []).length} 张`
+        : null,
       report.addedPerms.length ? `- ⚠️ 相对上一版本新增权限：${report.addedPerms.map((p) => `\`${p}\``).join(" ")}` : null,
       ``,
     ].filter((l) => l !== null).join("\n"));
@@ -598,7 +685,8 @@ async function main() {
   const versionRegistrationOnly =
     changedFiles !== null &&
     changedFiles.length === 1 &&
-    /^plugins\/[^/]+\.json$/.test(changedFiles[0]);
+    /^plugins\/[^/]+\.json$/.test(changedFiles[0]) &&
+    mediaOnlyEntries.length === 0;
   const result = {
     ok: errors.length === 0,
     errors: errors.length,

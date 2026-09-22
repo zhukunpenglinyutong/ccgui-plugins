@@ -27,6 +27,8 @@ import {
   JS_BLACKLIST,
   CSS_BLACKLIST,
   MAIN_MAX_BYTES,
+  mediaFieldProblem,
+  normalizeMediaPath,
 } from "./validate.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -80,6 +82,24 @@ export async function buildBumpedEntry(id, old, tag, manifest, assets) {
     }
   }
 
+  // 展示素材（SPEC-CHANGELOG v0.2）：manifest 是事实源；本轮 manifest 没写
+  // 的字段保留索引现值——素材可以在两次发版之间单独提索引 PR，机器人不该
+  // 在下一次版本登记时把它删掉。要删素材就显式写 "screenshots": []。
+  const presentation = {};
+  for (const field of ["icon", "screenshots"]) {
+    if (manifest[field] === undefined) {
+      if (old[field] !== undefined) presentation[field] = old[field];
+      continue;
+    }
+    const problem = mediaFieldProblem(field, manifest[field]);
+    if (problem) return { notes, skip: `manifest.${problem}（规范 §5.1）` };
+    if (field === "icon") {
+      presentation.icon = normalizeMediaPath(manifest.icon);
+    } else if (manifest.screenshots.length > 0) {
+      presentation.screenshots = manifest.screenshots.map((shot) => normalizeMediaPath(shot));
+    }
+  }
+
   // 产物下载 + SHA256 + 安全预检
   const sha256 = {};
   const files = ["manifest.json"];
@@ -128,6 +148,7 @@ export async function buildBumpedEntry(id, old, tag, manifest, assets) {
     ...(manifest.sdkVersion ? { sdkVersion: manifest.sdkVersion } : {}),
     permissions,
     sha256,
+    ...presentation,
     ...(old.delisted !== undefined ? { delisted: old.delisted } : {}),
     ...(old.pubkey ? { pubkey: old.pubkey } : {}),
   };
