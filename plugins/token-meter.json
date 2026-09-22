@@ -14,5 +14,9 @@
     "main.js": "889b842ae8674f3fd96c3d439c997f4bf585a92253425c3177bc140e8e588cf5",
     "manifest.json": "95d3f95557c3ee9ba4597567eba5d61e8a195f650fa3fdb28268c9b98b4f288c",
     "styles.css": "391a1ca7baa38420ff25117086c473e191ed30988a7b68d2e56d492edf2cf2ff"
-  }
+  },
+  "icon": "docs/icon.png",
+  "screenshots": [
+    "docs/screenshot-1.png"
+  ]
 }
