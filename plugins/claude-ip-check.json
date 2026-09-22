@@ -1,0 +1,33 @@
+{
+  "id": "claude-ip-check",
+  "repo": "zhukunpenglinyutong/ccgui-plugin-claude-ip-check",
+  "tier": "js",
+  "version": "1.0.0",
+  "minAppVersion": "1.0.6",
+  "sdkVersion": "^0.3",
+  "permissions": [
+    "ui:center-tab",
+    "ui:sidebar-entry",
+    "ui:command",
+    "storage",
+    "network:1.1.1.1",
+    "network:www.cloudflare.com",
+    "network:claude.ai",
+    "network:www.anthropic.com",
+    "network:my.ip.cn",
+    "network:ip.net.coffee",
+    "network:ccgui-1.d.ip.net.coffee",
+    "network:ccgui-2.d.ip.net.coffee",
+    "network:ccgui-3.d.ip.net.coffee",
+    "network:ccgui-4.d.ip.net.coffee"
+  ],
+  "sha256": {
+    "main.js": "9e7e546a6f0c6c79cbc10c2d896c660c2a6c05c9d460130927f90061883c08d6",
+    "manifest.json": "99f3f4c317f5c53db7fcf6877f13e421b1872b7e4e3dd4ef8a65ef6e7f90eafc",
+    "styles.css": "34312d09f29522c54e02c7b9d4cfad0e5ab7b297d5e1ca926722954d7b03879e"
+  },
+  "icon": "docs/icon.png",
+  "screenshots": [
+    "docs/screenshot-1.png"
+  ]
+}

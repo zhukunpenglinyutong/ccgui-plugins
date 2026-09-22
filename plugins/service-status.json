@@ -1,0 +1,33 @@
+{
+  "id": "service-status",
+  "repo": "zhukunpenglinyutong/ccgui-plugin-service-status",
+  "tier": "js",
+  "version": "1.0.0",
+  "minAppVersion": "1.0.6",
+  "sdkVersion": "^0.3",
+  "permissions": [
+    "ui:center-tab",
+    "ui:sidebar-entry",
+    "ui:command",
+    "exec:open",
+    "exec:xdg-open",
+    "exec:cmd",
+    "network:status.claude.com",
+    "network:status.openai.com",
+    "network:status.cursor.com",
+    "network:www.githubstatus.com",
+    "network:www.google.com",
+    "network:status.moonshot.cn",
+    "network:status.minimaxi.com",
+    "network:status.zed.dev"
+  ],
+  "sha256": {
+    "main.js": "140dbe3837adf57f71301b8314bcb826c71d84a24659e9a8136697a1f46c771f",
+    "manifest.json": "071d40f2c38fc60fa425e4e00956fd230cdecbfa6d32fa80780df02592abc0a0",
+    "styles.css": "6bd619af0b481c09a0ddfe3997cc364225dd3f6ed87af82b212b6f964372ebec"
+  },
+  "icon": "docs/icon.png",
+  "screenshots": [
+    "docs/screenshot-1.png"
+  ]
+}

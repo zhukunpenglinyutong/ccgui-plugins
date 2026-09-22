@@ -14,6 +14,13 @@
     "author": "zhujiuyi"
   },
   {
+    "id": "claude-ip-check",
+    "repo": "zhukunpenglinyutong/ccgui-plugin-claude-ip-check",
+    "name": "Claude IP 检查",
+    "description": "查看访问 Claude 的出口 IP、纯净度、地理与风险信号：三路出口 IP、信任评分、安全检测、DNS / WebRTC 泄露、设备信息与 IP 历史。移植自 TokenTracker。",
+    "author": "zhukunpenglinyutong"
+  },
+  {
     "id": "composer-rainbow-border",
     "repo": "libo-zhou/ccgui-plugin-composer-rainbow-border",
     "name": "彩虹跑马灯边界线",
@@ -32,6 +39,13 @@
     "repo": "zhukunpenglinyutong/ccgui-plugin-react-doctor",
     "name": "React Doctor",
     "description": "一键运行 npx react-doctor@latest 代码体检：评分环、错误/警告统计、按文件分组的问题列表与修复建议、原始输出，结果本地持久化；非满分时可「一键修复」把问题清单填入聊天输入框。",
+    "author": "zhukunpenglinyutong"
+  },
+  {
+    "id": "service-status",
+    "repo": "zhukunpenglinyutong/ccgui-plugin-service-status",
+    "name": "服务状态",
+    "description": "在中心页签聚合 Claude / OpenAI / Cursor / GitHub / Gemini / Kimi / MiniMax / Zed 官方状态页的实时事故状态，每分钟自动刷新。",
     "author": "zhukunpenglinyutong"
   },
   {
