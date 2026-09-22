@@ -2,7 +2,7 @@
   "id": "react-doctor",
   "repo": "zhukunpenglinyutong/ccgui-plugin-react-doctor",
   "tier": "js",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "minAppVersion": "1.0.0",
   "sdkVersion": "^0.3",
   "permissions": [
@@ -13,8 +13,8 @@
     "exec:node"
   ],
   "sha256": {
-    "manifest.json": "bea3c59e179dae58c5925c0d5c07b5118829093f178c5830d4c2983140d2f1e8",
-    "main.js": "7fac08c213e4b6029fb107b59de2eaedf12240a7c2f284d4fff34188c9afa6ba",
+    "manifest.json": "9f023673210cafe5bc217adade806efa2e27871cd9541fe5a6ae399eeae7b8ab",
+    "main.js": "eb23e06a4c674213b9307520daeb652ee05c859ce11870797dd59dbdd8a0ebbd",
     "styles.css": "354930a3f33953f27c7389aa5f75f3929a22d89c09ae76da2829fe2dd2be0ab7"
   },
   "icon": "docs/icon.png",
