@@ -2,7 +2,7 @@
   "id": "auto-title",
   "repo": "zhukunpenglinyutong/ccgui-plugin-auto-title",
   "tier": "js",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "minAppVersion": "1.0.2",
   "sdkVersion": ">=0.3.7",
   "permissions": [
@@ -22,8 +22,8 @@
     "network:api.deepseek.com"
   ],
   "sha256": {
-    "main.js": "3fdcf610598946a1f48b6972109167b0b22e806bc81a74bd2831b0e827031733",
-    "manifest.json": "099f7d540bdbb39d5ba3ae34f6d1a77dd12b2c3ccb5e1bff5d7fe556dab89496",
+    "manifest.json": "ac47da408484270de467c68f56a95bb2d544a6d75c2887e83762af3e45dd3ac6",
+    "main.js": "6106085a9dadc6f250d4f43c5633c2f264a96d18cc3356a4cf6e30a664233675",
     "styles.css": "4339bed694f2698deed7305a61910c013948907a7f0c8a1efd9b04d391bf5d55"
   },
   "icon": "docs/icon.png",
