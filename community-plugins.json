@@ -68,5 +68,12 @@
     "name": "WSL 管理器",
     "description": "WSL 发行版管理器:本机诊断与设默认、引擎探针、远程宿主(密码/key)、WSL 工作区登记、发行版内文件面板,claude/codex/omp 会话列表与历史回放。",
     "author": "chenxiangning"
+  },
+  {
+    "id": "session-rainbow-border",
+    "repo": "zsw118-sw/ccgui-plugin-session-rainbow-border",
+    "name": "工作区对话跑马灯",
+    "description": "左侧面板工作区各对话运行中时，为正在工作的对话列表项添加渐变旋转、闪灭呼吸、炽热烈焰等多种光效边框，支持设置面板自由切换与实时预览。",
+    "author": "zsw118-sw"
   }
 ]
