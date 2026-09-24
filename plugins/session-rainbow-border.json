@@ -1,0 +1,17 @@
+{
+  "id": "session-rainbow-border",
+  "repo": "zsw118-sw/ccgui-plugin-session-rainbow-border",
+  "tier": "js",
+  "version": "2.0.0",
+  "minAppVersion": "1.0.0",
+  "permissions": [
+    "storage",
+    "ui:settings-section",
+    "theme"
+  ],
+  "sha256": {
+    "manifest.json": "4b3d309ef304f4c5715d1a703e5d9cc4a6caed034bd2ea53a7683886f818352b",
+    "main.js": "c2e09396faac8f39eb230a815b64dcf3362fda4147b40416af337b5eb6f16931",
+    "styles.css": "d5840406970515f8486281d9062ac4d6e46c4b23f0a6dee767835737918b30ec"
+  }
+}
