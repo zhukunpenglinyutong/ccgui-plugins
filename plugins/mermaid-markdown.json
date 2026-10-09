@@ -1,0 +1,21 @@
+{
+  "id": "mermaid-markdown",
+  "repo": "zenghui6/ccgui-plugin-mermaid-markdown",
+  "tier": "js",
+  "version": "0.4.0",
+  "updatedAt": "2026-10-09T02:39:27Z",
+  "minAppVersion": "1.1.0",
+  "sdkVersion": "^0.3",
+  "permissions": [
+    "ui:markdown",
+    "ui:settings-section",
+    "i18n",
+    "assets:bundle",
+    "storage"
+  ],
+  "sha256": {
+    "main.js": "9420ca38a8e3ee577c5f1813be8440c60bbaed50e8b2e3f2646d13b80dca7793",
+    "manifest.json": "1e812a126fafacb5ed7c70e14fdb742576d19f389992ae08b2ca1633367df6fd",
+    "mermaid.min.js": "581ed7d74bd9048d0e3a91363927d72ef22942d7722546b27f7cc29e35390eb8"
+  }
+}
