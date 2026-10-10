@@ -70,6 +70,13 @@
     "author": "3774929"
   },
   {
+    "id": "mermaid-markdown",
+    "repo": "zenghui6/ccgui-plugin-mermaid-markdown",
+    "name": "Mermaid 图表",
+    "description": "把回答里的 ```mermaid 代码块渲染成真正的图表，大小与布局密度可调、支持深浅色主题",
+    "author": "zenghui6"
+  },
+  {
     "id": "model-switcher",
     "repo": "Guardian-J/ccgui-plugin-model-switcher",
     "name": "模型与供应商助手",
