@@ -1,0 +1,18 @@
+{
+  "id": "session-engine-filter",
+  "repo": "mai-ming/ccgui-plugin-session-engine-filter",
+  "tier": "js",
+  "version": "0.1.0",
+  "minAppVersion": "1.1.0",
+  "sdkVersion": "^0.3",
+  "permissions": [
+    "theme",
+    "ui:settings-section",
+    "storage"
+  ],
+  "sha256": {
+    "manifest.json": "25da2604b905ad1001fe1b750223bc348ed07aee392dc9699be61abd9a41ac8a",
+    "main.js": "c91f850c4c9d759ece5723593860c63d069fa3ed69bd2edd8b8a5be939156704",
+    "styles.css": "ae12cbd55a1604b451263f0eff8077b284d24775b9c82c6832bf505242b27580"
+  }
+}

@@ -119,6 +119,13 @@
     "author": "zhukunpenglinyutong"
   },
   {
+    "id": "session-engine-filter",
+    "repo": "mai-ming/ccgui-plugin-session-engine-filter",
+    "name": "会话来源屏蔽",
+    "description": "按 CLI 引擎屏蔽侧边栏会话：勾掉不想看的引擎（Pi、Codex、Grok、Kimi…），它们的会话行就不再出现在各工作区列表里；随时可恢复，只影响显示，不动会话数据。",
+    "author": "mai-ming"
+  },
+  {
     "id": "session-notes",
     "repo": "wszbest68-gif/ccgui-plugin-session-notes",
     "name": "会话便签",
