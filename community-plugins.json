@@ -84,6 +84,13 @@
     "author": "zenghui6"
   },
   {
+    "id": "minimax-mplan-usage",
+    "repo": "Unknown-EL/ccgui-plugin-minimax-mplan-usage",
+    "name": "MiniMax M Plan 用量",
+    "description": "底边状态栏实时显示 MiniMax M Plan 订阅的 5 小时窗口与周窗口用量，含迷你进度条、重置倒计时与域名自动回退。",
+    "author": "Unknown-EL"
+  },
+  {
     "id": "model-switcher",
     "repo": "Guardian-J/ccgui-plugin-model-switcher",
     "name": "模型与供应商助手",
