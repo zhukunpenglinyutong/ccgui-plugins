@@ -17,7 +17,7 @@
     "id": "background-ui",
     "repo": "Mermenglin/ccgui-plugin-background-ui",
     "name": "背景和 UI 优化",
-    "description": "应用背景、12 套主题配色、幕布、时间线、页签、聚焦光晕、滚动条等界面外观优化;内置 Wallhaven / UPX8 在线壁纸图库,支持搜索、分页、预览、设为背景与历史管理;图片经本机 node 分片下载。",
+    "description": "应用背景、12 套主题配色、幕布、时间线、页签、聚焦光晕、滚动条等界面外观优化;内置 Wallhaven / UPX8 在线壁纸图库,支持搜索、分页、预览、设为背景与历史管理;图片经本机 node 分片下载。能力提取自 Guardian-J 的上游插件（完整来源见 README）。",
     "author": "Mermenglin"
   },
   {
