@@ -77,6 +77,13 @@
     "author": "3774929"
   },
   {
+    "id": "github-mirror-marketplace",
+    "repo": "xuchuncheng/ccgui-plugin-github-mirror-marketplace",
+    "name": "社区插件市场镜像加速",
+    "description": "国内网络下 GitHub 静态资源被拦截、内置插件市场打不开时：按主地址→JsDelivr CDN→国内镜像自动回退抓取 community-plugins.json，在社区市场页签浏览并一键下载安装社区插件。",
+    "author": "xuchuncheng"
+  },
+  {
     "id": "mermaid-markdown",
     "repo": "zenghui6/ccgui-plugin-mermaid-markdown",
     "name": "Mermaid 图表",
