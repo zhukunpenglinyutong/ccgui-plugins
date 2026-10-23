@@ -23,6 +23,7 @@ import { fileURLToPath } from "node:url";
 import {
   isKnownPermission,
   isValidPluginId,
+  isValidAssetName,
   compareSemver,
   downloadAsset,
   JS_BLACKLIST,
@@ -107,6 +108,14 @@ export async function buildBumpedEntry(id, old, tag, manifest, assets) {
   const sha256 = {};
   const files = ["manifest.json"];
   if (old.tier === "js") files.push("main.js");
+  // Extra files are admitted by manual index review, not by whatever happens
+  // to be attached to a release. Preserve and refresh that reviewed set so a
+  // version bump cannot silently remove an installed runtime or its license.
+  for (const name of Object.keys(old.sha256 ?? {}).sort()) {
+    if (["manifest.json", "main.js", "styles.css"].includes(name)) continue;
+    if (!isValidAssetName(name)) return { notes, skip: `索引含非法附件名 "${name}"` };
+    files.push(name);
+  }
   const bufs = {};
   for (const file of files) {
     const r = await downloadAsset(old.repo, tag, file);

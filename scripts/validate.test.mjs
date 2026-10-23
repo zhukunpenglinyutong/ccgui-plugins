@@ -190,6 +190,42 @@ test("bump preflight accepts CCB permissions and produces a valid registration",
   assert.equal(fetchMock.mock.calls.length, 2);
 });
 
+test("bump refreshes every reviewed runtime asset without installing release archives", async (t) => {
+  const old = entry({
+    version: "1.0.1",
+    sha256: {
+      "manifest.json": "a".repeat(64), "main.js": "b".repeat(64),
+      "vendor-pixi.min.js": "c".repeat(64), "vendor-pixi.LICENSE": "d".repeat(64),
+    },
+  });
+  const candidate = { ...old, version: "1.0.2" };
+  const { files } = releaseFetch(t, candidate);
+  files["vendor-pixi.min.js"] = Buffer.from("window.PIXI = { version: 'new-runtime' };");
+  files["vendor-pixi.LICENSE"] = Buffer.from("Reviewed third-party license");
+  const result = await buildBumpedEntry(old.id, old, candidate.version, candidate,
+    [...Object.keys(files), "checksums.txt", "plugin-1.0.2.zip"]);
+  assert.equal(result.skip, undefined);
+  assert.deepEqual(result.entry.sha256, Object.fromEntries(Object.entries(files)
+    .map(([name, bytes]) => [name, createHash("sha256").update(bytes).digest("hex")])));
+  assert.deepEqual(entryErrors(result.entry), []);
+});
+
+test("bump refuses an update that loses a reviewed runtime asset", async (t) => {
+  const old = entry({
+    version: "1.0.1",
+    sha256: { "manifest.json": "a".repeat(64), "main.js": "b".repeat(64), "vendor-pixi.min.js": "c".repeat(64) },
+  });
+  const candidate = { ...old, version: "1.0.2" };
+  const files = { "manifest.json": JSON.stringify(candidate), "main.js": "export default function activate() {}" };
+  t.mock.method(globalThis, "fetch", async (url) => {
+    const name = new URL(url).pathname.split("/").at(-1);
+    return Object.hasOwn(files, name) ? new Response(files[name]) : new Response(null, { status: 404 });
+  });
+  const result = await buildBumpedEntry(old.id, old, candidate.version, candidate, Object.keys(files));
+  assert.equal(result.entry, undefined);
+  assert.match(result.skip, /vendor-pixi\.min\.js/);
+});
+
 test("bump preflight shares the complete permission and ID acceptance contract", async (t) => {
   for (const id of validIds) {
     await t.test(id, async (t) => {

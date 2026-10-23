@@ -2,9 +2,10 @@
   "id": "ccgui.live2d-pets",
   "repo": "MurasameCyan/ccgui-plugin-live2d-pets",
   "tier": "js",
-  "version": "1.0.10",
+  "version": "1.0.13",
+  "updatedAt": "2026-10-23T04:15:57Z",
   "minAppVersion": "1.0.4",
-  "sdkVersion": ">=0.3.20",
+  "sdkVersion": ">=0.3.21",
   "permissions": [
     "storage",
     "plugin.storage",
@@ -19,12 +20,25 @@
     "network:cdn.jsdelivr.net"
   ],
   "sha256": {
-    "manifest.json": "2f8449bf75e931a004996325e03249ac4311890453a00ffa43e1adae5d747a31",
-    "main.js": "43bebb957bf897bcdc27e27018aae286af06f59e176eec4966e5de11a8a88b34"
+    "manifest.json": "816dabbe61249bc1ca4f84efe92373e089a834f0c6540ef6a98b9ec4b1afb534",
+    "main.js": "400069a1b9a60bf862ae7fdcb450e4be1ac92398bff6a4a393cbefbb494460ca",
+    "LICENSE": "c6b9310cb75b4451559f0e29508b047b2148ef61fb3ce4dcccb960f80ec67d86",
+    "vendor-README.md": "42d7e2f0df38eeb2ebbe7f6f8ae98458dcdfb1f39ad58e4885ff28154e109cf9",
+    "vendor-cubism-framework.LICENSE.md": "7ed849bff1e6499aa7cd882e47d246ddbbe06817c1e84cb974df949488302614",
+    "vendor-live2d-display.cubism2.min.js": "0e86a36540fb487d463904fc5e295316a3130dfc8ac345f37f29b34bed48bba3",
+    "vendor-live2d-runtime.js": "555be31bda1848ef2b27569b154b989561917b24326e96c877a1877357acdc14",
+    "vendor-live2d.min.js": "e4ea1f18bdd44b65394ffd5a1bab16982e88757d45134d1bd0737c8a6b3ddd08",
+    "vendor-live2dcubismcore.LICENSE.md": "b81e37048010ef1d336106151201a0323c3309cae44aecdedf57831fe88fa991",
+    "vendor-live2dcubismcore.RedistributableFiles.txt": "d16c123688299e1e69a7f5ebc01b3bd75a8d408c024002a7d35b2aae94003f8c",
+    "vendor-live2dcubismcore.min.js": "8741f739779b5d5210872bd3d7d99f0f1e56e6c87409e7d26d6bb4b80aa1ef47",
+    "vendor-pixi-live2d-display.LICENSE": "8ccace668a041e78ed525d091b0b5daf8b623ff447f912616de535415e4f302f",
+    "vendor-pixi-unsafe-eval.LICENSE": "ef9ae15b5a2b39f6e1445fb1e12ade9f000ebb19c173fb1e505879ba215d9c9d",
+    "vendor-pixi-unsafe-eval.min.js": "94bb4bfdbd015087772ee03bc4117e253c326e8ca73a61646bd331b22f6847ad",
+    "vendor-pixi.LICENSE": "536a16e090f0b6c1454a7c0b47ee8414a39a2f1724a154f10ca1edc750a2dcfd",
+    "vendor-pixi.min.js": "c651f3e6afb4ccaa87a236539605e059b3ab54045a0e4f5633a947bc34760511"
   },
   "icon": "assets/icons/paw-print.svg",
   "screenshots": [
-    "docs/media/hero.jpg",
-    "docs/media/settings-pet-config.png"
+    "docs/media/hero.jpg"
   ]
 }
