@@ -1,0 +1,32 @@
+{
+  "id": "scheduled-tasks",
+  "repo": "linfeng-wu/ccgui-plugin-scheduled-tasks",
+  "tier": "js",
+  "version": "0.2.7",
+  "minAppVersion": "1.1.1",
+  "sdkVersion": ">=0.3.19",
+  "permissions": [
+    "storage",
+    "events",
+    "agent",
+    "ui:center-tab",
+    "ui:sidebar-entry",
+    "ui:status-bar",
+    "ui:command",
+    "ui:settings-section",
+    "host:session",
+    "host:workspace",
+    "host:models"
+  ],
+  "sha256": {
+    "main.js": "6f93ab208d33a27f6c2a40773913b48f2b383e91faa3eb88deca9d7e879e8c43",
+    "manifest.json": "e56719d18c6fc5aa5f83abda9677c9224e04c4f74b169cac957a1072aa36199c",
+    "styles.css": "2591571ad5e7e3ecbffa8947b7a451e2e8e146e73c523b1a64d105e3e0ec611a"
+  },
+  "icon": "docs/icon.png",
+  "screenshots": [
+    "docs/screenshot-1.png",
+    "docs/screenshot-2.png",
+    "docs/screenshot-3.png"
+  ]
+}

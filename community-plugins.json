@@ -112,6 +112,13 @@
     "author": "zhukunpenglinyutong"
   },
   {
+    "id": "scheduled-tasks",
+    "repo": "linfeng-wu/ccgui-plugin-scheduled-tasks",
+    "name": "定时任务",
+    "description": "用 5 字段 cron 在指定工作区定时发起 AI 轮次：每轮在侧栏新建可见会话，实时流式、可接管可停止；支持技能绑定、自然语言建任务、运行记录、失败退避与自动暂停。CC GUI 关闭时不执行。",
+    "author": "linfeng-wu"
+  },
+  {
     "id": "service-status",
     "repo": "zhukunpenglinyutong/ccgui-plugin-service-status",
     "name": "服务状态",
