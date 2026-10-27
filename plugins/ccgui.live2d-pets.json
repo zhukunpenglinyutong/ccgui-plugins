@@ -2,7 +2,7 @@
   "id": "ccgui.live2d-pets",
   "repo": "MurasameCyan/ccgui-plugin-live2d-pets",
   "tier": "js",
-  "version": "1.0.13",
+  "version": "1.0.15",
   "minAppVersion": "1.0.4",
   "sdkVersion": ">=0.3.21",
   "permissions": [
@@ -19,8 +19,8 @@
     "network:cdn.jsdelivr.net"
   ],
   "sha256": {
-    "manifest.json": "816dabbe61249bc1ca4f84efe92373e089a834f0c6540ef6a98b9ec4b1afb534",
-    "main.js": "400069a1b9a60bf862ae7fdcb450e4be1ac92398bff6a4a393cbefbb494460ca"
+    "manifest.json": "f80ebedcddcb3c08349617f94ca053c835ab566e3c42bdc8e1afb5f3d3fc61ae",
+    "main.js": "d2976a63600f2e0d68fd4b603d70bb4ececb06ebc0bbb37460a327cf5f898566"
   },
   "icon": "assets/icons/paw-print.svg",
   "screenshots": [
