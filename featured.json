@@ -1,13 +1,13 @@
 [
   {
+    "id": "usage-limits",
+    "tagline": "今天烧了多少，限额还剩多少",
+    "note": "状态栏常驻今日 token、估算费用与 5h / 7d 限额，点开看趋势与项目明细。"
+  },
+  {
     "id": "token-meter",
     "tagline": "把「等得值不值」变成两个数字",
     "note": "输出速度与缓存命中率，直接长在 composer 上。"
-  },
-  {
-    "id": "react-doctor",
-    "tagline": "一条命令，给前端项目做一次体检",
-    "note": "评分环 + 逐文件定位，适合发版前跑一次。"
   },
   {
     "id": "file-drag-upload",
@@ -18,10 +18,5 @@
     "id": "auto-title",
     "tagline": "再也不用给会话起名字",
     "note": "官方出品，零配置：装完就生效。"
-  },
-  {
-    "id": "balance-meter",
-    "tagline": "余额这件事，不该靠开网页查",
-    "note": "按网关识别计费方式：API 查余额、订阅查余量。"
   }
 ]
