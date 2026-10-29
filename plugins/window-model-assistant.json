@@ -2,9 +2,9 @@
   "id": "window-model-assistant",
   "repo": "wszbest68-gif/ccgui-plugin-window-model-assistant",
   "tier": "js",
-  "version": "0.1.2",
-  "minAppVersion": "1.0.9",
-  "sdkVersion": "^0.3.14",
+  "version": "0.1.3",
+  "minAppVersion": "1.1.2",
+  "sdkVersion": "^0.3.19",
   "permissions": [
     "agent",
     "storage",
@@ -12,12 +12,12 @@
     "ui:settings-section",
     "ui:command",
     "ui:status-bar",
-    "i18n"
+    "i18n",
+    "host:window"
   ],
   "sha256": {
     "main.js": "72b1f59eef2cfc7c9e61bdc939d48cc74263e43407455a74afa147496341009b",
-    "manifest.json": "553c8a27b66bd8cac0eaf2581dc1c7bdb431bbeb4f42ce49bf1ce8f64405924d",
+    "manifest.json": "181f72d1ded60cec59e8b193ee0d54e12ff7b2adcf2a2a3e6be4cfaa925e221e",
     "styles.css": "a3be28ffcc376d369457b039eeade82ba622ba464a76c60799a7747a669ba1ca"
-  },
-  "delisted": true
+  }
 }
