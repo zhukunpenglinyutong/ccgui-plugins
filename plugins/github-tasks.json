@@ -2,8 +2,7 @@
   "id": "github-tasks",
   "repo": "zhukunpenglinyutong/ccgui-plugin-git-tasks",
   "tier": "js",
-  "version": "0.2.1",
-  "updatedAt": "2026-10-27T15:40:51Z",
+  "version": "0.3.0",
   "minAppVersion": "1.1.8",
   "sdkVersion": ">=0.3.22",
   "permissions": [
@@ -15,6 +14,7 @@
     "storage",
     "host:workspace",
     "host:worktree",
+    "network:open.feishu.cn:443",
     "exec:gh",
     "exec:git",
     "exec:open",
@@ -22,9 +22,9 @@
     "exec:cmd"
   ],
   "sha256": {
-    "main.js": "953d4c1c2087239da29a3e9db2f22713b3c9840ceeb6045d28278fe368879b8c",
-    "manifest.json": "2254d52bd2def4e24f365aa286beec76f599095b3aca1f0ae6b25846ecb5caa7",
-    "styles.css": "ae4d7fcc3b6285796076ca4ef33da86a75d74cf3bb0efbe97e8250710e98d69b"
+    "manifest.json": "974ce1c95f9c66bfc6e9a69110df902e8383205da4862c999e45386277d22f72",
+    "main.js": "f8e0da521660b0152bba6e621d4aa3e8e424d220e4239d1b084f4e45f154b721",
+    "styles.css": "5f28ed2661bcd254788a841eaf49a53cc35c4f6ff22fe5f34e32acf04b8395c6"
   },
   "icon": "docs/icon.png",
   "screenshots": [
