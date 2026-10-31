@@ -17,6 +17,7 @@
 - 校验工作流在远端附件核查前执行 Node 行为回归，覆盖登记与版本更新、权限和 ID 边界、现有条目兼容及黑名单门禁。
 - 权限-代码比对不再绑定上下文接收者名字（此前写死 `ctx.`）：打包产物会把 `activate` 的上下文参数压缩成任意标识符，旧启发式对所有压缩 bundle 静默失效，「调用了却没声明」这条错误判定等于没有。改法按 API 名字的歧义程度分两档：名字唯一的注册/方法调用（`ui.register*`、`hooks.*`、`workspace.getMetadata`、`documentStorage.*` 等）按成员路径匹配，与接收者无关；名字通用的 namespace（`models`/`sessions`/`window`/`storage`/`events`/`theme`/`agent`/`i18n`）必须连同 SDK 真实方法名一起匹配，因为裸 `.models.` 会打到 API 响应的数据字段、内部 Map 和特性探测（实测 `d.models.map`、`this.sessions.get`、`typeof e.window.getState`），按裸 namespace 判错会把合规插件拒掉。同时补齐 `workspaces.list`、`composer.setDraft`、`worktrees.*`、`models.*` 等 0.3.20 能力面。`hooks.registerTurnHooks` 的两项权限按入参字段分别门禁，静态分不开，只用于抑制「声明了但没用到」的警告，不作硬性错误。
 - 远端核查区分「文件确实缺失」（404）与「连接失败」：传输层错误与 408/429/5xx 退避重试 3 次，404 立即返回不重试。两者都判错（门禁 fail closed），但连接失败的措辞明确标注非作者问题、重跑即可，审核员不应据此要求插件作者补文件。
+- 版本机器人保留已人工审核的额外扁平资源集合，并对新版本逐项下载重算 SHA-256；缺少已登记的运行库或许可时不生成更新。新增、移除资源仍走人工索引审核，Release 中未登记的附件不会被自动安装。
 
 ## v0.3 — 2026-10（编辑精选：featured.json）
 
