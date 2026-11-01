@@ -1,0 +1,23 @@
+{
+  "id": "personal-task-board",
+  "repo": "sheldon0112/ccgui-plugin-personal-task-board",
+  "tier": "js",
+  "version": "0.1.18",
+  "sdkVersion": ">=0.3.19",
+  "permissions": [
+    "ui:sidebar-entry",
+    "ui:center-tab",
+    "host:workspace",
+    "host:models",
+    "host:session",
+    "events",
+    "plugin.storage",
+    "assets:directory",
+    "storage"
+  ],
+  "sha256": {
+    "main.js": "5a633976a42324a319c081327a7404fde245a8288619ca5ffa93c1b6f5245519",
+    "manifest.json": "b049d135a70bf50b24a921118c41d634c075009388dbd387f27a113d6b5bf00e",
+    "styles.css": "be90f9db2407dc66118dd875fbc279f1474f3d6b63fc095183b2cd60fb0c2b58"
+  }
+}

@@ -105,6 +105,13 @@
     "author": "Guardian-J"
   },
   {
+    "id": "personal-task-board",
+    "repo": "sheldon0112/ccgui-plugin-personal-task-board",
+    "name": "个人任务看板",
+    "description": "本地管理任务，交给 CC GUI 原生会话执行并人工验收。",
+    "author": "AnnoDomini"
+  },
+  {
     "id": "port-manager",
     "repo": "hekai753/port-manager",
     "name": "端口管理",
