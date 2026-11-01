@@ -2,7 +2,7 @@
   "id": "ai-quota-monitor",
   "repo": "libo-zhou/ccgui-plugin-ai-quota-monitor",
   "tier": "js",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "minAppVersion": "1.0.8",
   "sdkVersion": "^0.3.7",
   "permissions": [
@@ -16,9 +16,10 @@
     "network:copilot.tencent.com"
   ],
   "sha256": {
-    "main.js": "4b7ce80be1338083232a07e0d3a6c053b02d2f04a48385084cfd58a776425a2d",
-    "manifest.json": "857c6f1fcbd8cb81836df84e31a0505ce5ffc195ffc1efa894baa3a9a16b8dde",
-    "styles.css": "79d6521a9e3387903b7a8f866c3c6a6ac8d6770fd7dae0a96490c931792c3134"
+    "main.js": "7f4a4842fcc4128355dd63f619b43e0c6475ddb62cf7be063f48182ec1142a4f",
+    "manifest.json": "bc663cb5f9688f72edcc2fe750db07ecac5b623cff6dcd585d2b5a05bd33d285",
+    "styles.css": "79d6521a9e3387903b7a8f866c3c6a6ac8d6770fd7dae0a96490c931792c3134",
+    "usage-scanner.cjs": "96b2e573f04726a37914f8805724342e8a9004de96e05801b95abf408c76ad8e"
   },
   "screenshots": [
     "docs/codex-quota.png",
