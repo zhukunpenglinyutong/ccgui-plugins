@@ -37,6 +37,8 @@ git tag 1.0.0 && git push origin 1.0.0
 模板自带的 GitHub Action 会自动构建并把 `main.js` / `manifest.json` /
 `styles.css` / `checksums.txt` 附加到该 tag 的 Release。
 
+额外运行资源也必须使用扁平附件名（字母、数字、`.`、`_`、`-`），并通过人工审核登记到 `sha256`。客户端逐项下载固定文件，不解压 ZIP，也不保留旧安装目录中未登记的资源。
+
 ### 3. 首次上架：提 PR 到本仓库
 
 1. Fork 本仓库。
@@ -94,6 +96,9 @@ git tag 1.0.0 && git push origin 1.0.0
 
 - 无权限新增 + CI 通过 → review 工作流**自动合并**，用户随即收到更新提示；
 - 权限有新增 → PR 挂起**转人工审核**，老用户升级时会看到权限 diff 确认。
+
+- 已人工登记的额外资源（如运行库与许可）会在每次版本更新时重新下载并计算哈希；缺少任一文件则跳过更新，避免升级后丢失运行资源。
+- 新增或移除额外资源须人工修改索引；机器人不会自动安装 Release 中未审核的附件、ZIP 或 `checksums.txt`。
 
 > 维护者注意：机器人开 PR 需要仓库 Secret `INDEX_BOT_TOKEN`（对本仓有
 > contents + pull-requests 写权限的 fine-grained PAT）——Actions 默认
