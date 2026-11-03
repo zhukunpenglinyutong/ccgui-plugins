@@ -77,6 +77,13 @@
     "author": "PartyNextDoor999"
   },
   {
+    "id": "filetree-open-with",
+    "repo": "xuchuncheng/ccgui-plugin-filetree-open-with",
+    "name": "文件树 · 在关联应用中打开",
+    "description": "在右侧文件树右键菜单里追加“在关联应用中打开”，用系统默认关联程序打开选中的文件或文件夹。",
+    "author": "xuchuncheng"
+  },
+  {
     "id": "font-tuner",
     "repo": "3774929/ccgui-plugin-font-tuner",
     "name": "字体调校",
