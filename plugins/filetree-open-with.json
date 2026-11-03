@@ -1,0 +1,18 @@
+{
+  "id": "filetree-open-with",
+  "repo": "xuchuncheng/ccgui-plugin-filetree-open-with",
+  "tier": "js",
+  "version": "0.1.0",
+  "minAppVersion": "1.0.0",
+  "sdkVersion": "^0.3",
+  "permissions": [
+    "exec:cmd",
+    "storage",
+    "ui:settings-section"
+  ],
+  "sha256": {
+    "main.js": "aa2afa35acbe26af4023a6deb8cfca7eb517566e08001f3ba2dfff4845a5ee4f",
+    "manifest.json": "4b7a3fa7a4d311427c42b98db695e84e23956f6a23bf9067e8cd187d65956f49"
+  },
+  "updatedAt": "2026-11-03T01:40:12Z"
+}
