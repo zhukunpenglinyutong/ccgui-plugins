@@ -2,7 +2,7 @@
   "id": "git-workbench",
   "repo": "Guardian-J/ccgui-plugin-git-workbench",
   "tier": "js",
-  "version": "0.2.24",
+  "version": "0.2.25",
   "sdkVersion": "^0.3.23",
   "permissions": [
     "storage",
@@ -23,7 +23,7 @@
     "network:none"
   ],
   "sha256": {
-    "main.js": "454f6e3c79b96cf7eaa37e6e24463697907b270e36b5f6885d84938a6ec4ae6d",
-    "manifest.json": "203810f11714bfa02f83f944794ec4e7ac73d2a1670a416270c5a16f25b66e48"
+    "main.js": "1f17d437d590048c6d2c097212f05e364fd907c7bdc910a55bd5298e98d6c682",
+    "manifest.json": "aa218e163243dff1048a304bbb1d2d08f23ccc970bbad8f71e398b853990b65a"
   }
 }
