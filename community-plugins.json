@@ -52,7 +52,7 @@
     "id": "composer-rainbow-border",
     "repo": "libo-zhou/ccgui-plugin-composer-rainbow-border",
     "name": "彩虹跑马灯边界线",
-    "description": "对话运行中为聊天输入框添加沿边界持续流动的彩虹跑马灯效果，空闲时恢复常规边框。",
+    "description": "对话运行中为聊天输入框与会话页签展示彩虹跑马灯，后台会话完成时呈现绿色呼吸未读边框。",
     "author": "libo-zhou"
   },
   {
