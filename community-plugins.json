@@ -126,6 +126,13 @@
     "author": "wszbest68-gif"
   },
   {
+    "id": "prompt-optimizer",
+    "repo": "xuchuncheng/ccgui-plugin-prompt-optimizer",
+    "name": "提示词优化器",
+    "description": "把 prompt-optimizer v2.13.0 的 41 个官方提示词模板搬进 CC GUI：输入框旁 ✨ 弹窗，基础/上下文/图像/变量四大类 15 个子模式，支持优化、迭代、评估、变量抽取与图像提示词，结果可一键写回。",
+    "author": "xuchuncheng"
+  },
+  {
     "id": "react-doctor",
     "repo": "zhukunpenglinyutong/ccgui-plugin-react-doctor",
     "name": "React Doctor",
