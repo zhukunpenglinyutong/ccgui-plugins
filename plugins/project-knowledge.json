@@ -1,0 +1,30 @@
+{
+  "id": "project-knowledge",
+  "repo": "xuchuncheng/ccgui-plugin-project-knowledge",
+  "tier": "js",
+  "version": "0.1.0",
+  "minAppVersion": "1.1.1",
+  "sdkVersion": "^0.3",
+  "permissions": [
+    "ui:panel-tab",
+    "ui:composer-status",
+    "storage",
+    "events",
+    "prompt.contribute.internal",
+    "host:session",
+    "composer:draft"
+  ],
+  "sha256": {
+    "main.js": "15a056a8c311bf4462d430c017d60b14d1bf9d4d5bc6304cc170bae7c0ad44fd",
+    "manifest.json": "50ceed55a26aab6dfdb092004b77e7a9640bc94ca484453279eb0c3450728730",
+    "styles.css": "a77a5a48cc463e420255ab7e35a190097baec8a48bac7d85536cea0909fbe3f9"
+  },
+  "icon": "docs/icon.svg",
+  "screenshots": [
+    "docs/screenshot-1-notes.png",
+    "docs/screenshot-2-todos.png",
+    "docs/screenshot-3-plan.png",
+    "docs/screenshot-4-context-list.png"
+  ],
+  "updatedAt": "2026-11-06T03:54:36Z"
+}
