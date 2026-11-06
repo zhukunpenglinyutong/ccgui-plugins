@@ -84,6 +84,13 @@
     "author": "3774929"
   },
   {
+    "id": "git-workbench",
+    "repo": "Guardian-J/ccgui-plugin-git-workbench",
+    "name": "Git 工作台",
+    "description": "复刻 IntelliJ IDEA 的 Git 工具窗口：多仓库识别、本地更改 / 提交、提交图、分支、合并/变基、暂存、标签、远程、子模块、Blame、控制台。直接驱动本机 git CLI，兼容任意 git 版本与任意托管平台。",
+    "author": "Guardian-J"
+  },
+  {
     "id": "github-tasks",
     "repo": "zhukunpenglinyutong/ccgui-plugin-git-tasks",
     "name": "CCGUI · Git 任务管理",
