@@ -1,8 +1,9 @@
 {
   "id": "background-ui",
-  "repo": "Mermenglin/ccgui-plugin-background-ui",
+  "repo": "MaxMeiRose/ccgui-plugin-background-ui",
   "tier": "js",
-  "version": "0.0.2",
+  "version": "0.0.3",
+  "updatedAt": "2026-11-03T12:24:49Z",
   "minAppVersion": "1.0.0",
   "sdkVersion": "^0.3.1",
   "permissions": [
@@ -19,8 +20,8 @@
     "exec:node"
   ],
   "sha256": {
-    "main.js": "d5361fc77bf63f89107721bb5ff0be76e5209168232e13eee81c624ba9db2ab8",
-    "manifest.json": "f2c273c0173aa9cbd0be667300d166318ebb182472d19ceb186579fbb3784c07",
+    "main.js": "f380e90fe8d69f57ba138b9faf15d51af895405d1869695cbe4fd6a03938d5df",
+    "manifest.json": "21270ae6c34e2e6ee556896fab8a7160f4d3ab091b13f372d3b3d615c0156cf1",
     "styles.css": "2b4dda92d07830ac5b3218f5c26317b661846733773b84d1cf26a952722ff4c4"
   }
 }
