@@ -168,6 +168,13 @@
     "author": "zsw118-sw"
   },
   {
+    "id": "smart-session-title",
+    "repo": "huochairener/ccgui-plugin-smart-session-title",
+    "name": "智能会话命名",
+    "description": "每轮对话结束后自动为会话生成带 emoji 前缀的简短标题：直调引擎 CLI 智能命名（默认跟随会话引擎，可固定引擎/模型，不落对话记录），失败回退本地关键词规则；状态栏显示进度与失败原因，附调试日志与右键重新命名。",
+    "author": "huochairener"
+  },
+  {
     "id": "token-meter",
     "repo": "zhukunpenglinyutong/ccgui-plugin-token-meter",
     "name": "Token 速度表",
