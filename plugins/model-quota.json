@@ -1,0 +1,21 @@
+{
+  "id": "model-quota",
+  "repo": "BobbyBian97/ccgui-plugin-model-quota",
+  "tier": "js",
+  "version": "0.2.1",
+  "minAppVersion": "1.1.9",
+  "sdkVersion": ">=0.3.24",
+  "permissions": [
+    "ui:composer-status",
+    "ui:settings-section",
+    "storage",
+    "events",
+    "network:open.bigmodel.cn",
+    "network:api.z.ai",
+    "network:opencode.ai"
+  ],
+  "sha256": {
+    "main.js": "e5635643a386608dd42c124aa50abeeffc62ffd9a00fa87140141ba13bdbfc58",
+    "manifest.json": "cd8d96ba99ebc34212c137f6fe2032ee7c22accacd6e5e5a51d0f0c961c3868b"
+  }
+}
