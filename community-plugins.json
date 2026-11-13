@@ -133,6 +133,13 @@
     "author": "hekai753"
   },
   {
+    "id": "project-knowledge",
+    "repo": "xuchuncheng/ccgui-plugin-project-knowledge",
+    "name": "项目知识",
+    "description": "把当前项目的笔记 / 待办 / 计划挂载进对话上下文：右侧面板三 Tab 增删改，挂载按会话隔离，发送前自动注入给模型，移出后不再带入。",
+    "author": "xuchuncheng"
+  },
+  {
     "id": "prompt-enhancer",
     "repo": "wszbest68-gif/ccgui-plugin-prompt-enhancer",
     "name": "提示词增强",
