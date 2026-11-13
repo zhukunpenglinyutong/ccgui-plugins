@@ -1,0 +1,29 @@
+{
+  "id": "smart-session-title",
+  "repo": "huochairener/ccgui-plugin-smart-session-title",
+  "tier": "js",
+  "version": "0.4.2",
+  "minAppVersion": "1.1.0",
+  "sdkVersion": "^0.3.14",
+  "permissions": [
+    "events",
+    "host:session",
+    "exec:node",
+    "exec:pi",
+    "exec:omp",
+    "exec:claude",
+    "exec:codebuddy",
+    "exec:codex",
+    "storage",
+    "plugin.storage",
+    "ui:settings-section",
+    "ui:session-menu",
+    "ui:status-bar",
+    "ui:command"
+  ],
+  "sha256": {
+    "main.js": "3e26a16a2399d98c186cc96e6c9dab5ca01e822e44ee768d03797c3a694eb4a3",
+    "manifest.json": "6c57f980fd6866c3712afed0ebad5a306e3f871e55edeb63a52bc977767b100b"
+  },
+  "icon": "docs/icon.svg"
+}
