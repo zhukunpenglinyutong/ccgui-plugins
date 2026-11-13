@@ -1,0 +1,29 @@
+{
+  "id": "git-workbench",
+  "repo": "Guardian-J/ccgui-plugin-git-workbench",
+  "tier": "js",
+  "version": "0.2.27",
+  "sdkVersion": "^0.3.23",
+  "permissions": [
+    "storage",
+    "plugin.storage",
+    "theme",
+    "workspace.metadata.read",
+    "host:workspace",
+    "ui:panel-tab",
+    "ui:settings-section",
+    "ui:sidebar-entry",
+    "ui:overlay",
+    "ui:command",
+    "ui:workspace-menu",
+    "ui:file-link-menu",
+    "exec:git",
+    "exec:sh",
+    "exec:powershell",
+    "network:none"
+  ],
+  "sha256": {
+    "main.js": "bb684d7151deba6f9325946cb4d6b4a5b7de5e042a8078af8ace8f7078feb672",
+    "manifest.json": "6ee23522415a8985b7b2160f6e302a36fb9c8a5270c52a73ec1fd4d34579a8fa"
+  }
+}
