@@ -56,6 +56,13 @@
     "author": "libo-zhou"
   },
   {
+    "id": "dsh-skins-ccgui",
+    "repo": "BaoHao-JIA/ccgui-plugin-dsh-skins",
+    "name": "DSH 皮肤与壁纸",
+    "description": "把 dsh-skins 的三套配色和八张内置壁纸带到 CC GUI，支持即时切换、阅读遮罩和图片适配。",
+    "author": "BaoHao-JIA"
+  },
+  {
     "id": "engine-hopper",
     "repo": "wszbest68-gif/ccgui-plugin-engine-hopper",
     "name": "引擎接力",
