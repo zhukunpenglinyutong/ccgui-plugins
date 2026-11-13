@@ -1,0 +1,24 @@
+{
+  "id": "local-task-monitor",
+  "repo": "BobbyBian97/ccgui-plugin-local-task-monitor",
+  "tier": "js",
+  "version": "0.4.0",
+  "minAppVersion": "1.1.1",
+  "sdkVersion": ">=0.3.16",
+  "permissions": [
+    "ui:panel-tab",
+    "ui:settings-section",
+    "exec:powershell",
+    "host:workspace",
+    "storage"
+  ],
+  "sha256": {
+    "main.js": "f86d6395edca6992533760177da5fc4a2c4c905b56e49d0c977090b702c0ae9d",
+    "manifest.json": "bae011f9f65da6b0082037ea0ef2faff87d3a3ecc63b18c9355b090f4d847a3f"
+  },
+  "icon": "docs/icon.png",
+  "screenshots": [
+    "docs/screenshot-1-panel.png",
+    "docs/screenshot-2-settings.png"
+  ]
+}
