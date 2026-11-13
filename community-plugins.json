@@ -105,6 +105,13 @@
     "author": "zenghui6"
   },
   {
+    "id": "model-quota",
+    "repo": "BobbyBian97/ccgui-plugin-model-quota",
+    "name": "模型额度胶囊",
+    "description": "在输入框状态栏用胶囊显示当前会话模型所在渠道的 5 小时 / 周 / 月额度（已用百分比，悬浮看剩余），支持智谱 GLM Coding Plan 与 OpenCode Go。",
+    "author": "BobbyBian97"
+  },
+  {
     "id": "model-switcher",
     "repo": "Guardian-J/ccgui-plugin-model-switcher",
     "name": "模型与供应商助手",
