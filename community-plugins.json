@@ -91,6 +91,13 @@
     "author": "zhukunpenglinyutong"
   },
   {
+    "id": "local-task-monitor",
+    "repo": "BobbyBian97/ccgui-plugin-local-task-monitor",
+    "name": "本机任务监控",
+    "description": "监控 CC GUI 进程树与可归属侧栏工作区的监听服务：PID、项目、端口、CPU、内存；工作区服务可经二次确认停止或重启，进程树保持只读。",
+    "author": "BobbyBian97"
+  },
+  {
     "id": "mermaid-markdown",
     "repo": "zenghui6/ccgui-plugin-mermaid-markdown",
     "name": "Mermaid 图表",
