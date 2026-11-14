@@ -2,7 +2,8 @@
   "id": "local-task-monitor",
   "repo": "BobbyBian97/ccgui-plugin-local-task-monitor",
   "tier": "js",
-  "version": "0.4.0",
+  "version": "0.5.0",
+  "updatedAt": "2026-11-14T02:01:40Z",
   "minAppVersion": "1.1.1",
   "sdkVersion": ">=0.3.16",
   "permissions": [
@@ -13,8 +14,8 @@
     "storage"
   ],
   "sha256": {
-    "main.js": "f86d6395edca6992533760177da5fc4a2c4c905b56e49d0c977090b702c0ae9d",
-    "manifest.json": "bae011f9f65da6b0082037ea0ef2faff87d3a3ecc63b18c9355b090f4d847a3f"
+    "manifest.json": "3683fb4b74aa8b769db94afcce14a76635fc48983027356b83a772fa2b5b83f3",
+    "main.js": "87dd5153a9d537a805c2ec50eaf09f26f68da3dde832b0aa9a1edcbdce0f4ddb"
   },
   "icon": "docs/icon.png",
   "screenshots": [
