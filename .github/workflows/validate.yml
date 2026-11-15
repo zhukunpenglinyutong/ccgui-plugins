@@ -25,9 +25,11 @@ jobs:
       - name: Test validation contract
         run: node --test scripts/validate.test.mjs
 
+      # base 用 merge ref 的第一父提交而非 origin/<base>：后者会随 main 移动，
+      # 合并后重跑时 PR 改动已在 main 里，diff 为空 → 0 条目被核查却显示通过（#110）。
       - name: Validate changed entries (PR)
         if: github.event_name == 'pull_request'
-        run: node scripts/validate.mjs --base "origin/${{ github.base_ref }}" --report report.md --result result.json
+        run: node scripts/validate.mjs --base "HEAD^1" --report report.md --result result.json
 
       - name: Validate all entries (main)
         if: github.event_name == 'push'
