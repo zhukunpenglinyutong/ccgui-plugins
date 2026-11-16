@@ -105,6 +105,13 @@
     "author": "zhukunpenglinyutong"
   },
   {
+    "id": "local-memory",
+    "repo": "libo-zhou/ccgui-plugin-local-memory",
+    "name": "项目记忆",
+    "description": "项目与全局分层记忆，支持对话自然语言记忆、Prompt 无感注入、底栏状态与设置页管理。",
+    "author": "libo-zhou"
+  },
+  {
     "id": "local-task-monitor",
     "repo": "BobbyBian97/ccgui-plugin-local-task-monitor",
     "name": "本机任务监控",
