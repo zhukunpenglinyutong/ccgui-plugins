@@ -56,6 +56,13 @@
     "author": "libo-zhou"
   },
   {
+    "id": "daily-sentence",
+    "repo": "huochairener/ccgui-plugin-daily-sentence",
+    "name": "每日一句",
+    "description": "在状态栏左侧展示每日一句，支持多种动画、自定义接口与字段映射，以及按日、小时或分钟自动更新。",
+    "author": "huochairener"
+  },
+  {
     "id": "dsh-skins-ccgui",
     "repo": "BaoHao-JIA/ccgui-plugin-dsh-skins",
     "name": "DSH 皮肤与壁纸",
