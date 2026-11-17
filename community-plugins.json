@@ -107,8 +107,8 @@
   {
     "id": "local-memory",
     "repo": "libo-zhou/ccgui-plugin-local-memory",
-    "name": "项目记忆",
-    "description": "项目与全局分层记忆，支持对话自然语言记忆、Prompt 无感注入、底栏状态与设置页管理。",
+    "name": "长期记忆",
+    "description": "本地长期记忆（全局偏好、项目专属记忆与Agent专属规范），支持自然语言动态记忆、引擎隔离注入与设置页管理。",
     "author": "libo-zhou"
   },
   {
