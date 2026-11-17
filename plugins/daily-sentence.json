@@ -1,0 +1,19 @@
+{
+  "id": "daily-sentence",
+  "repo": "huochairener/ccgui-plugin-daily-sentence",
+  "tier": "js",
+  "version": "1.0.0",
+  "permissions": [
+    "ui:status-bar",
+    "ui:settings-section",
+    "storage",
+    "events",
+    "network:v1.hitokoto.cn",
+    "network:v2.xxapi.cn"
+  ],
+  "sha256": {
+    "main.js": "d451a055b654f36d48522541e365e8c1bba0b3e0437ac7cf353b8b941864e752",
+    "manifest.json": "df9e3d76783079fe88c37e7e65e6b22592e64b708870e05dc8909399f5a58334",
+    "styles.css": "d45ba7f06a8766112992dbefdb2932da161dbc11a49ace7979eac760adefa006"
+  }
+}
