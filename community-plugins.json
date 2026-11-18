@@ -238,6 +238,13 @@
     "author": "zhukunpenglinyutong"
   },
   {
+    "id": "translation",
+    "repo": "huochairener/ccgui-plugin-translation",
+    "name": "轻译",
+    "description": "选中文字右键翻译、状态栏自动翻译，以及模型回复旁的单条翻译。支持 Bing、Google 和自定义 AI。",
+    "author": "huochairener"
+  },
+  {
     "id": "usage-limits",
     "repo": "zhukunpenglinyutong/ccgui-plugin-usage-limits",
     "name": "用量与限额",

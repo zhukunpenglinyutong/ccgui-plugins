@@ -1,0 +1,32 @@
+{
+  "id": "translation",
+  "repo": "huochairener/ccgui-plugin-translation",
+  "tier": "js",
+  "version": "1.0.0",
+  "sdkVersion": "^0.3.25",
+  "permissions": [
+    "storage",
+    "ui:status-bar",
+    "ui:overlay",
+    "ui:settings-section",
+    "theme",
+    "network:www.bing.com",
+    "network:cn.bing.com",
+    "network:translate.googleapis.com",
+    "network:api.openai.com",
+    "network:token.sensenova.cn",
+    "network:localhost",
+    "network:127.0.0.1"
+  ],
+  "sha256": {
+    "main.js": "1d51a4659799153707ceaee4c7e2b1cc60b13c9058f9f3e1453390110ccd023d",
+    "manifest.json": "8fc6e8ca50a7a1eeb8edea28d63288cf35ca9e7303fd39d35edd03758e33463a",
+    "styles.css": "132c3d8be2010f9f6d55173d6d5dc3be24ff0ecca83758688c129b80f3ac1701"
+  },
+  "icon": "docs/icon.png",
+  "screenshots": [
+    "docs/screenshots/panel.png",
+    "docs/screenshots/reply.png",
+    "docs/screenshots/settings.png"
+  ]
+}
