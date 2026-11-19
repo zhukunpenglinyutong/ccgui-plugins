@@ -2,7 +2,7 @@
   "id": "local-memory",
   "repo": "libo-zhou/ccgui-plugin-local-memory",
   "tier": "js",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "minAppVersion": "1.0.0",
   "sdkVersion": "^0.3",
   "permissions": [
@@ -17,8 +17,8 @@
     "workspace.metadata.read"
   ],
   "sha256": {
-    "main.js": "a179796eb1dc34ad7270240f291e084830121f82c39a230b709b20c3bea53987",
-    "manifest.json": "6ddaed3b33cc6c09cc483314e9b17c796a8e4efe46c40df30142545f5667efc4",
+    "main.js": "9a3f2357b24f413c7f1da7c5e58b3176ca958df69eb18525a97738870c6c77b8",
+    "manifest.json": "fdb7f0ed0577f6f9f69cff7f376803cfce72ee10bc85b10a205a6b96da3ac106",
     "styles.css": "45513a397a086a9b40bf3111de7eee003413d532a2d064673011817a14159d0c"
   },
   "icon": "docs/icon.svg"
