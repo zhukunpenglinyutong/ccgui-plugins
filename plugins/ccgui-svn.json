@@ -2,7 +2,7 @@
   "id": "ccgui-svn",
   "repo": "sheldon0112/plugin-svn",
   "tier": "js",
-  "version": "0.1.8",
+  "version": "0.2.0",
   "minAppVersion": "1.2.4",
   "sdkVersion": "^0.3",
   "permissions": [
@@ -14,7 +14,8 @@
     "i18n"
   ],
   "sha256": {
-    "main.js": "037885f8b87e421aa82fa1a8ea993aef77bb777b313b3ab9c23fc0c673c2e3f0",
-    "manifest.json": "4d7423d37fa6c6b95ef9d7b0ce7db503f94adfd3e686eeb9a97dd45d020681e7"
-  }
+    "main.js": "32c1a1c0e8d1095311bd662786788f79e3139bff7c238b3147b7e027437997cf",
+    "manifest.json": "4ac6cb7d6c9645a1eef2c3e85c3c303a312322a87d901c0ac4202a168417ac3a"
+  },
+  "updatedAt": "2026-11-19T11:03:16Z"
 }
