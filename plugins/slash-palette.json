@@ -1,0 +1,23 @@
+{
+  "id": "slash-palette",
+  "repo": "renhao-wan/ccgui-plugin-slash-palette",
+  "tier": "js",
+  "version": "0.1.0",
+  "minAppVersion": "1.0.4",
+  "sdkVersion": "^0.3",
+  "permissions": [
+    "ui:composer-status",
+    "ui:overlay",
+    "ui:command",
+    "ui:settings-section",
+    "composer:draft",
+    "exec:powershell",
+    "theme",
+    "storage"
+  ],
+  "sha256": {
+    "main.js": "077acd2a91bfb872db138f7c931e40f35b0a5e7d355e449deb5ca3785880fa84",
+    "manifest.json": "a7857ba0d6c21a0debdc746b3c04dd056dce60736ef8cb9783ccdc399328b89c"
+  },
+  "icon": "docs/icon.png"
+}
