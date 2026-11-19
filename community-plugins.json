@@ -238,6 +238,13 @@
     "author": "zsw118-sw"
   },
   {
+    "id": "slash-palette",
+    "repo": "renhao-wan/ccgui-plugin-slash-palette",
+    "name": "Claude 斜杠命令",
+    "description": "仅支持 Claude Code：点一下输入框旁的「/ 命令」，搜索并插入插件与用户的命令、技能，不用再记命令名。",
+    "author": "renhao-wan"
+  },
+  {
     "id": "smart-session-title",
     "repo": "huochairener/ccgui-plugin-smart-session-title",
     "name": "智能会话命名",
