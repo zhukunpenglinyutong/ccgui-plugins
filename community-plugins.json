@@ -28,6 +28,13 @@
     "author": "zhujiuyi"
   },
   {
+    "id": "ccgui-svn",
+    "repo": "sheldon0112/plugin-svn",
+    "name": "SVN 管理面板",
+    "description": "在 CC GUI 中管理当前工作区的 SVN 变更、历史、差异和冲突。",
+    "author": "AnnoDomini"
+  },
+  {
     "id": "ccgui.client-context-bridge",
     "repo": "MurasameCyan/ccgui-plugin-client-context-bridge",
     "name": "跨客户端上下文桥接 (CCB)",
