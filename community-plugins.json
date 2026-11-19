@@ -56,6 +56,13 @@
     "author": "zhukunpenglinyutong"
   },
   {
+    "id": "cli-install-audit",
+    "repo": "renhao-wan/ccgui-plugin-cli-install-audit",
+    "name": "CLI 安装检测",
+    "description": "逐个探测 CC GUI 支持的 CLI 引擎，对比 PATH 入口与运行中进程的版本和 SHA256，标出缺失与分叉。",
+    "author": "renhao-wan"
+  },
+  {
     "id": "composer-rainbow-border",
     "repo": "libo-zhou/ccgui-plugin-composer-rainbow-border",
     "name": "彩虹跑马灯边界线",

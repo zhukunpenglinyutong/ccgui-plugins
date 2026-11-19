@@ -1,0 +1,19 @@
+{
+  "id": "cli-install-audit",
+  "repo": "renhao-wan/ccgui-plugin-cli-install-audit",
+  "tier": "js",
+  "version": "1.0.0",
+  "minAppVersion": "1.0.4",
+  "sdkVersion": "^0.3",
+  "permissions": [
+    "ui:settings-section",
+    "ui:command",
+    "exec:powershell",
+    "storage"
+  ],
+  "sha256": {
+    "main.js": "c9174e970f7c576351bb416af74c32c94a2989e0883d01465a12d76103213d51",
+    "manifest.json": "c5006b0331577941d0e523ba2adf7e008b9f23e014e82b760bf78fba19a50f22"
+  },
+  "icon": "docs/icon.png"
+}
