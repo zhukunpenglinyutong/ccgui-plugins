@@ -2,11 +2,12 @@
   "id": "daily-sentence",
   "repo": "huochairener/ccgui-plugin-daily-sentence",
   "tier": "js",
-  "version": "1.0.1",
-  "updatedAt": "2026-11-17T08:43:13Z",
+  "version": "1.1.0",
+  "updatedAt": "2026-11-20T08:32:44Z",
   "sdkVersion": "^0.3",
   "permissions": [
     "ui:status-bar",
+    "ui:overlay",
     "ui:settings-section",
     "storage",
     "events",
@@ -14,9 +15,9 @@
     "network:v2.xxapi.cn"
   ],
   "sha256": {
-    "manifest.json": "4277aeb6fbb65034123226f5dbc4e6eb1db834f21ae3bf36df55a473637313f3",
-    "main.js": "d451a055b654f36d48522541e365e8c1bba0b3e0437ac7cf353b8b941864e752",
-    "styles.css": "d45ba7f06a8766112992dbefdb2932da161dbc11a49ace7979eac760adefa006"
+    "manifest.json": "b4d17158221b2e7c8e976d1c11e4550f920867ba2b1e5130e44d70b95ff06dfb",
+    "main.js": "4c8c91fc5a26a85b0686a8b39b9fbdd6d8fade2371b377d63941d68b7a8e5a38",
+    "styles.css": "44a23a9fa8bf0952b79501b451014a5d49c748de499fd6498d5868c2fec052d1"
   },
   "icon": "docs/icon.png"
 }
