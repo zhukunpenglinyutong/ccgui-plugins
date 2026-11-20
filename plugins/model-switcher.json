@@ -2,7 +2,7 @@
   "id": "model-switcher",
   "repo": "Guardian-J/ccgui-plugin-model-switcher",
   "tier": "js",
-  "version": "1.0.42",
+  "version": "1.1.0",
   "minAppVersion": "1.0.5",
   "sdkVersion": "^0.3.11",
   "permissions": [
@@ -29,7 +29,7 @@
     "network:localhost:1-65535"
   ],
   "sha256": {
-    "main.js": "97a4d01f99a2ee70cc4e44d4f04f50a8192376ad86a7abef703826d4cfe1a59b",
-    "manifest.json": "0f45685a8aeb7f84a31f7bc3dca0704ddf974a5383e0083895bc3fdfb4e5bd4b"
+    "main.js": "fe87f54ad18167cb152248ee90f7f509963c123c142f93a7a08a58e8c462b74c",
+    "manifest.json": "a397982d504a3b081e5151c9ab56d7fe77f6a98fec381eb9ad79ac7ba41ee8a2"
   }
 }
