@@ -3,7 +3,7 @@
     "id": "ai-quota-monitor",
     "repo": "libo-zhou/ccgui-plugin-ai-quota-monitor",
     "name": "AI 配额与用量监控",
-    "description": "支持 Google Antigravity (Gemini)、OpenAI Codex 与 CodeBuddy 积分，查看可用额度、Token 消耗与成本、用量热力图与重置时间。支持状态栏与智能联动。",
+    "description": "查看 Gemini、Codex、CodeBuddy、OpenCode、Claude、Grok、GLM、Kimi 的配额与积分，最多自选三个页签展示，并统计本地 Token 用量、成本及热力图。",
     "author": "libo-zhou"
   },
   {
