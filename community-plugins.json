@@ -73,7 +73,7 @@
     "id": "daily-sentence",
     "repo": "huochairener/ccgui-plugin-daily-sentence",
     "name": "每日一句",
-    "description": "在状态栏左侧展示每日一句，支持多种动画、自定义接口与字段映射，以及按日、小时或分钟自动更新。",
+    "description": "在状态栏左侧展示每日一句，悬浮时弹出可复制、可换句的句子卡片；支持多种动画、自定义接口与字段映射，以及按日、小时或分钟自动更新。",
     "author": "huochairener"
   },
   {
