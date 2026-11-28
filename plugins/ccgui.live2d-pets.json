@@ -2,8 +2,8 @@
   "id": "ccgui.live2d-pets",
   "repo": "MurasameCyan/ccgui-plugin-live2d-pets",
   "tier": "js",
-  "version": "1.0.16",
-  "updatedAt": "2026-10-29T13:05:29Z",
+  "version": "1.0.17",
+  "updatedAt": "2026-11-28T07:12:49Z",
   "minAppVersion": "1.0.4",
   "sdkVersion": ">=0.3.21",
   "permissions": [
@@ -20,8 +20,8 @@
     "network:cdn.jsdelivr.net"
   ],
   "sha256": {
-    "manifest.json": "12df8fe85a21bd228b6337f1975dd3ad01b0b78b29715605b259adf7198dbe6b",
-    "main.js": "d2976a63600f2e0d68fd4b603d70bb4ececb06ebc0bbb37460a327cf5f898566",
+    "manifest.json": "70f9b129a0c4ba130ffd4ac773d0eb9e11ebd7a6f9d0e77a576a7305736b4f2d",
+    "main.js": "8a69767c7867587e0af84c81997ba556002fcf3f9ee6e3b2f929b1b51cd7edf2",
     "LICENSE": "c6b9310cb75b4451559f0e29508b047b2148ef61fb3ce4dcccb960f80ec67d86",
     "vendor-README.md": "42d7e2f0df38eeb2ebbe7f6f8ae98458dcdfb1f39ad58e4885ff28154e109cf9",
     "vendor-cubism-framework.LICENSE.md": "7ed849bff1e6499aa7cd882e47d246ddbbe06817c1e84cb974df949488302614",
