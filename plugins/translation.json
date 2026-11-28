@@ -2,7 +2,7 @@
   "id": "translation",
   "repo": "huochairener/ccgui-plugin-translation",
   "tier": "js",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "sdkVersion": "^0.3.25",
   "permissions": [
     "storage",
@@ -15,13 +15,16 @@
     "network:translate.googleapis.com",
     "network:api.openai.com",
     "network:token.sensenova.cn",
+    "network:fanyi-api.baidu.com",
+    "network:mt.cn-hangzhou.aliyuncs.com",
+    "network:openapi.youdao.com",
     "network:localhost",
     "network:127.0.0.1"
   ],
   "sha256": {
-    "main.js": "1d51a4659799153707ceaee4c7e2b1cc60b13c9058f9f3e1453390110ccd023d",
-    "manifest.json": "8fc6e8ca50a7a1eeb8edea28d63288cf35ca9e7303fd39d35edd03758e33463a",
-    "styles.css": "132c3d8be2010f9f6d55173d6d5dc3be24ff0ecca83758688c129b80f3ac1701"
+    "main.js": "d42fbe03483ad33c0a6a2f94c7be6a6e5231bad922709be8c0bd77db37d3ae37",
+    "manifest.json": "bdaa399ceb970b711f1edd82082e33168ba2d022cbecf27fedb93489c6b6a980",
+    "styles.css": "3ef8f8c3f191db29ea0e40b4e65c51016e3d088bb55daaaa3a008207ee2c766a"
   },
   "icon": "docs/icon.png",
   "screenshots": [
